@@ -29,7 +29,7 @@ func TestBuildLogger(t *testing.T) {
 func TestLog(t *testing.T) {
 	asserts := assert.New(t)
 	asserts.NotNil(Log())
-	GloablLogger = nil
+	GlobalLogger = nil
 	asserts.NotNil(Log())
 }
 

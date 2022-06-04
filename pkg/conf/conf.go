@@ -126,7 +126,7 @@ func Init(path string) {
 	// 重设log等级
 	if !SystemConfig.Debug {
 		util.Level = util.LevelInformational
-		util.GloablLogger = nil
+		util.GlobalLogger = nil
 		util.Log()
 	}
 
