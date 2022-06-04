@@ -18,7 +18,7 @@ const (
 	LevelDebug
 )
 
-var GloablLogger *Logger
+var GlobalLogger *Logger
 var Level = LevelDebug
 
 // Logger 日志
@@ -135,16 +135,16 @@ func BuildLogger(level string) {
 	l := Logger{
 		level: intLevel,
 	}
-	GloablLogger = &l
+	GlobalLogger = &l
 }
 
 // Log 返回日志对象
 func Log() *Logger {
-	if GloablLogger == nil {
+	if GlobalLogger == nil {
 		l := Logger{
 			level: Level,
 		}
-		GloablLogger = &l
+		GlobalLogger = &l
 	}
-	return GloablLogger
+	return GlobalLogger
 }
